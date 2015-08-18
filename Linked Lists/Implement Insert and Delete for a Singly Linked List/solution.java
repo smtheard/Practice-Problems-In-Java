@@ -15,7 +15,7 @@ class List {
 	}
 
 	void insert(Node node, int data) {
-		if(head == null){
+		if(node == null){
 			head = new Node(data);
 			return;
 		}
@@ -28,10 +28,10 @@ class List {
 	}
 
 	void delete(Node node, int deleteMe) {
-		if(head == null)
+		if(node == null)
 			return;
-		if(head.data == deleteMe){
-			head = head.next;
+		if(node.data == deleteMe){
+			head = node.next;
 			return;
 		}
 		if(node.next == null)
