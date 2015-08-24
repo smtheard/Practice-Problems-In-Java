@@ -1,7 +1,10 @@
 class Solution {
 
     public static int hammingWeight(int n) {
-    	return (n - 1) % 9 + 1;
+    	while(n > 9){
+        	n = n/10 + n - (n/10 * 10);
+        }
+        return n;
     }
 
 	public static void main(String[] args) {
