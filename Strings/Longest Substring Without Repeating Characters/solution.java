@@ -1,29 +1,8 @@
 class Solution {
 	public static int lengthOfLongestSubstring(String s) {
-        String longestSubstring = "";
-        String currentSubstring = "";
-        int rootIndex = 0;
-        for(int i = 0; i < s.length(); i++) {
-                int longestSubstringLength = longestSubstring.length();
-                if(longestSubstringLength == 95) //maximum number of valid characters. (not including ascii 0-31 or the DEL char in inputs)
-                    return longestSubstringLength;
-            	if(currentSubstring.length() > longestSubstringLength){
-            		longestSubstring = currentSubstring;
-                }
-            	if(!currentSubstring.contains(Character.toString(s.charAt(i)))){
-                    if(currentSubstring.equals(""))
-                        rootIndex = i;
-            		currentSubstring += s.charAt(i);
-            	}
-            	else{
-                    i = rootIndex;
-            		currentSubstring = "";
-                }
-        }
-        if(currentSubstring.length() > longestSubstring.length())
-        		longestSubstring = currentSubstring;
-
-        return longestSubstring.length();
+        char[] str = s.toCharArray();
+        int startOfSubstring = 0;
+        int endOfSubstring = 0;
     }
 	
 	public static void main(String[] args) {
