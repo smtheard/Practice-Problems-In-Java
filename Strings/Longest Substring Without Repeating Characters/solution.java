@@ -1,8 +1,28 @@
 class Solution {
+	public static boolean exists(char[] s, int start, int end, char c) {
+		for(int i = start; i < end; i++){
+			if(s[i] == c)
+				return true;
+		}
+		return false;
+	}
 	public static int lengthOfLongestSubstring(String s) {
         char[] str = s.toCharArray();
-        int startOfSubstring = 0;
-        int endOfSubstring = 0;
+        int start = 0;
+        int end = 0;
+        int largest = 0;
+        for(int i = 0; i < str.length; i++){
+        	if(!exists(str, start, end, str[i])){
+        		end = i;
+        	}
+        	else{
+        		start = start + 1;
+        	}
+        	if(largest < (end - start))
+        			largest = end - start;
+        }
+        System.out.println("start: " + start + " end: " + end + " the string: " + s);
+        return largest;
     }
 	
 	public static void main(String[] args) {
