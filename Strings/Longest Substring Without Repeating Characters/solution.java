@@ -6,7 +6,7 @@ class Solution {
 		}
 		return false;
 	}
-    
+
 	public static int lengthOfLongestSubstring(String s) {
         char[] str = s.toCharArray();
         int start = 0;
@@ -22,7 +22,7 @@ class Solution {
         	if(largest < (end - start + 1))
         			largest = end - start + 1;
         }
-        System.out.println("start: " + start + " end: " + end + " the string: " + s);
+        //System.out.println("start: " + start + " end: " + end + " the string: " + s);
         return largest;
     }
 	
