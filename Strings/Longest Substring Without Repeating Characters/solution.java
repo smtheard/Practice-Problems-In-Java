@@ -18,6 +18,7 @@ class Solution {
         	}
         	else{
         		start = start + 1;
+                i = start;
         	}
         	if(largest < (end - start + 1))
         			largest = end - start + 1;
