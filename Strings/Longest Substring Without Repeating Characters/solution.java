@@ -1,6 +1,6 @@
 class Solution {
 	public static boolean exists(char[] s, int start, int end, char c) {
-		for(int i = start; i < end; i++){
+		for(int i = start; i <= end; i++){
 			if(s[i] == c)
 				return true;
 		}
@@ -17,6 +17,7 @@ class Solution {
         		end = i;
         	}
         	else{
+
         		start = start + 1;
                 i = start;
         	}
