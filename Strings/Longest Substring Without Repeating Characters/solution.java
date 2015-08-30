@@ -1,6 +1,8 @@
 class Solution {
 	public static boolean exists(char[] s, int start, int end, char c) {
-		for(int i = start; i <= end; i++){
+        if(start == end)
+            return s[start] == c;
+		for(int i = start; i < end; i++){
 			if(s[i] == c)
 				return true;
 		}
@@ -17,12 +19,11 @@ class Solution {
         		end = i;
         	}
         	else{
-
         		start = start + 1;
                 i = start;
         	}
         	if(largest < (end - start + 1))
-        			largest = end - start + 1;
+                    largest = end - start + 1;
         }
         //System.out.println("start: " + start + " end: " + end + " the string: " + s);
         return largest;
@@ -35,9 +36,9 @@ class Solution {
         System.out.println(lengthOfLongestSubstring("dvdf")); //3
         System.out.println(lengthOfLongestSubstring("dvadf")); //4
         System.out.println(lengthOfLongestSubstring("abcabrdefgabcd")); //8
-		System.out.println(lengthOfLongestSubstring("aaaaaaaaa")); //1
+		System.out.println(lengthOfLongestSubstring("aaaaaaaaa")); //1 issue
 		System.out.println(lengthOfLongestSubstring("abcabcabc")); //3
-		System.out.println(lengthOfLongestSubstring("abcabcabcc")); //3
+		System.out.println(lengthOfLongestSubstring("abcabcabcc")); //3 issue
 		System.out.println(lengthOfLongestSubstring("abcabcabcd")); //4
 		System.out.println(lengthOfLongestSubstring("abcabdecabc")); //5 abdec
 	}
