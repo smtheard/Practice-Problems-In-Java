@@ -1,8 +1,8 @@
 class Solution {
 	public static boolean exists(char[] s, int start, int end, char c) {
-        if(start >= end)
-            return s[end] == c;
-		for(int i = start; i < end; i++){
+        if(start == end)
+            return s[start] == c;
+		for(int i = start; i <= end; i++){
 			if(s[i] == c)
 				return true;
 		}
@@ -15,6 +15,7 @@ class Solution {
         int end = 0;
         int largest = 0;
         for(int i = 0; i < str.length; i++){
+            
         	if(!exists(str, start, end, str[i])){
         		end = i;
         	}
@@ -40,11 +41,11 @@ class Solution {
         System.out.println(lengthOfLongestSubstring("aab")); //2
         System.out.println(lengthOfLongestSubstring("dvdf")); //3
         System.out.println(lengthOfLongestSubstring("dvadf")); //4
-        System.out.println(lengthOfLongestSubstring("abcabrdefgabcd")); //8
+        System.out.println(lengthOfLongestSubstring("abcabrdefgabcd")); //8 issue
 		System.out.println(lengthOfLongestSubstring("aaaaaaaaa")); //1
 		System.out.println(lengthOfLongestSubstring("abcabcabc")); //3
-		System.out.println(lengthOfLongestSubstring("abcabcabcc")); //3 issue
-		System.out.println(lengthOfLongestSubstring("abcabcabcd")); //4
+		System.out.println(lengthOfLongestSubstring("abcabcabcc")); //3 
+		System.out.println(lengthOfLongestSubstring("abcabcabcd")); //4 issue
 		System.out.println(lengthOfLongestSubstring("abcabdecabc")); //5 abdec
         System.out.println(lengthOfLongestSubstring("")); //0
 	}
