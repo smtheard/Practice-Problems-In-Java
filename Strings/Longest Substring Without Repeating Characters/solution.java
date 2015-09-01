@@ -15,13 +15,8 @@ class Solution {
         int end = 0;
         int largest = 0;
         for(int i = 0; i < str.length; i++){
-            
         	if(!exists(str, start, end, str[i])){
         		end = i;
-        	}
-        	else if(start < end){
-        		start++;
-                i = start;
         	}
             else{
                 start++;
@@ -41,12 +36,12 @@ class Solution {
         System.out.println(lengthOfLongestSubstring("aab")); //2
         System.out.println(lengthOfLongestSubstring("dvdf")); //3
         System.out.println(lengthOfLongestSubstring("dvadf")); //4
-        System.out.println(lengthOfLongestSubstring("abcabrdefgabcd")); //8 issue
+        System.out.println(lengthOfLongestSubstring("abcabrdefgabcd")); //8
 		System.out.println(lengthOfLongestSubstring("aaaaaaaaa")); //1
 		System.out.println(lengthOfLongestSubstring("abcabcabc")); //3
 		System.out.println(lengthOfLongestSubstring("abcabcabcc")); //3 
-		System.out.println(lengthOfLongestSubstring("abcabcabcd")); //4 issue
-		System.out.println(lengthOfLongestSubstring("abcabdecabc")); //5 abdec
+		System.out.println(lengthOfLongestSubstring("abcabcabcd")); //4
+		System.out.println(lengthOfLongestSubstring("abcabdecabc")); //5
         System.out.println(lengthOfLongestSubstring("")); //0
 	}
 }
