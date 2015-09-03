@@ -10,6 +10,7 @@ class Solution {
     }
 	
 	public static void main(String[] args) {
+		System.out.println(lengthOfLastWord("Hello")); //5
 		System.out.println(lengthOfLastWord("Hello World")); //5
 		System.out.println(lengthOfLastWord("Hello World be")); //2
 		System.out.println(lengthOfLastWord("Hello to the World of Word")); //4
