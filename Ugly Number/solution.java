@@ -1,22 +1,22 @@
 import java.util.*;
 class Solution {
-	public static ArrayList<Integer> primeFactors(int num){
-		ArrayList<Integer> primes = new ArrayList<Integer>();
-		primes.add(2);
-		primes.add(3);
-		primes.add(5);
-		return primes;
+	public static ArrayList<Integer> primeFactorization(int num){
+		ArrayList<Integer> primeFactors = new ArrayList<Integer>();
+		primeFactors.add(2);
+		primeFactors.add(3);
+		primeFactors.add(5);
+		return primeFactors;
 	}
 	public static boolean isUgly(int num) {
-		ArrayList<Integer> primes = primeFactors(num);
+		ArrayList<Integer> primeFactors = primeFactorization(num);
 		int conditions = 0;
-		if(primes.contains(2))
+		if(primeFactors.contains(2))
 			conditions++;
-		if(primes.contains(3))
+		if(primeFactors.contains(3))
 			conditions++;
-		if(primes.contains(5))
+		if(primeFactors.contains(5))
 			conditions++;
-        return primes.size() == conditions;
+        return primeFactors.size() == conditions;
     }
 
 	public static void main(String[] args) {
