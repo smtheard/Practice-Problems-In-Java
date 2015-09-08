@@ -12,9 +12,9 @@ class Solution {
 		int conditions = 0;
 		if(primes.contains(2))
 			conditions++;
-		else if(primes.contains(3))
+		if(primes.contains(3))
 			conditions++;
-		else if(primes.contains(5))
+		if(primes.contains(5))
 			conditions++;
         return primes.size() == conditions;
     }
