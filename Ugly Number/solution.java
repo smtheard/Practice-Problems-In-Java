@@ -9,13 +9,20 @@ class Solution {
 	}
 	public static boolean isUgly(int num) {
 		ArrayList<Integer> primes = primeFactors(num);
-        return primes.contains(2) && 
-        	   primes.contains(3) &&
-        	   primes.contains(5) &&
-        	   primes.size() == 3;
+		int conditions = 0;
+		if(primes.contains(2))
+			conditions++;
+		else if(primes.contains(3))
+			conditions++;
+		else if(primes.contains(5))
+			conditions++;
+        return primes.size() == conditions;
     }
 
 	public static void main(String[] args) {
 		System.out.println(isUgly(1)); //T
+		System.out.println(isUgly(6)); //T
+		System.out.println(isUgly(8)); //T
+		System.out.println(isUgly(14)); //F
 	}
 }
