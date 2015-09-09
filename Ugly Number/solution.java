@@ -2,9 +2,12 @@ import java.util.*;
 class Solution {
 	public static ArrayList<Integer> primeFactorization(int num){
 		ArrayList<Integer> primeFactors = new ArrayList<Integer>();
-		primeFactors.add(2);
-		primeFactors.add(3);
-		primeFactors.add(5);
+		for(int i = 2; i <= num; i++){
+			while(num % i == 0){
+				primeFactors.add(i);
+				num = num/i;
+			}
+		}
 		return primeFactors;
 	}
 	public static boolean isUgly(int num) {
