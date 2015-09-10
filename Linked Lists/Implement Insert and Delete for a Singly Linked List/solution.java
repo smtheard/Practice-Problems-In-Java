@@ -60,6 +60,6 @@ class Solution {
 		list.insert(list.head, 3);
 		list.delete(list.head, 2);
 		list.delete(list.head, 1);
-		list.printList(list.head);
+		list.printList(list.head); //3
 	}
 }
