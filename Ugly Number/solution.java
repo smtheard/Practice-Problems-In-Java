@@ -4,7 +4,8 @@ class Solution {
 		ArrayList<Integer> primeFactors = new ArrayList<Integer>();
 		for(int i = 2; i <= num; i++){
 			while(num % i == 0){
-				primeFactors.add(i);
+				if(!primeFactors.contains(i))
+					primeFactors.add(i);
 				num = num/i;
 			}
 		}
