@@ -28,5 +28,6 @@ class Solution {
 		System.out.println(isUgly(6)); //T
 		System.out.println(isUgly(8)); //T
 		System.out.println(isUgly(14)); //F
+		//System.out.println(isUgly(905391974)); //time limit exceeded on leetcode
 	}
 }
