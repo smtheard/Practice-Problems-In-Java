@@ -51,10 +51,10 @@ class Solution {
         long bigNum = 9999999991l;
         setNumber(root2, bigNum);
         System.out.println("List 1");
-        printList(root);
+        printList(root); //9
         System.out.println("List 2");
-        printList(root2);
+        printList(root2); //1 9 9 9 9 9 9 9 9 9
         System.out.println("List Combined");
-        printList(addTwoNumbers(root, root2));
+        printList(addTwoNumbers(root, root2)); //0 0 0 0 0 0 0 0 0 0 1
 	}
 }
