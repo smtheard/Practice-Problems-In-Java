@@ -20,7 +20,7 @@ class Solution {
 			conditions++;
 		if(primeFactors.contains(5))
 			conditions++;
-        return primeFactors.size() == conditions;
+        return conditions == primeFactors.size();
     }
 
 	public static void main(String[] args) {
@@ -28,6 +28,6 @@ class Solution {
 		System.out.println(isUgly(6)); //T
 		System.out.println(isUgly(8)); //T
 		System.out.println(isUgly(14)); //F
-		System.out.println(isUgly(905391974)); //time limit exceeded on leetcode
+		System.out.println(isUgly(905391974)); //F time limit exceeded on leetcode
 	}
 }
