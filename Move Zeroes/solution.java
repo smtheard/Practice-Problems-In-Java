@@ -1,12 +1,12 @@
 class Solution {
 	public static void moveZeroes(int[] nums) {
-        int max = nums.length;
         int numZeroes = 0;
-        for(int i = 0; i < max; i++){
+        for(int i = nums.length - 1; i > -1 ; i--){
             if(nums[i] == 0){
-                nums[i] = nums[nums.length - numZeroes - 1];
+                for(int j = i; j < nums.length - 1; j++){
+                    nums[j] = nums[j + 1];
+                }
                 nums[nums.length - numZeroes - 1] = 0;
-                max--;
                 numZeroes++;
             }
         }
