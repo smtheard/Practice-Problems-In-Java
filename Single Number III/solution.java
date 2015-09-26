@@ -2,7 +2,6 @@ import java.util.*;
 
 class Solution {
 	public static int[] singleNumber(int[] nums) {
-		//idea to merge sort first, then return the elements that appear once
         int arr[] = {3, 5};
         return arr;
     }
