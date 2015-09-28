@@ -14,6 +14,8 @@ class Solution {
 		System.out.println(titleToNumber(input)); //26
 		input = "AA";
 		System.out.println(titleToNumber(input)); //27
+		input = "BA";
+		System.out.println(titleToNumber(input)); //27
 		input = "AB";
 		System.out.println(titleToNumber(input)); //28
 		input = "AAA";
