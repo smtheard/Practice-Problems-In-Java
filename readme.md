@@ -4,9 +4,15 @@ This repository will contain a folder for each interview question I can find and
 I am using ST2 and Java7.
 
 In progress:
+
 Single Number
+
 Single Number III
+
 Perfect Squares
+
 Two Sum
+
 Reverse words in a string
+
 String to Integer (atoi)
