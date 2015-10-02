@@ -16,3 +16,5 @@ Two Sum
 Reverse words in a string
 
 String to Integer (atoi)
+
+Missing Number
