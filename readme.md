@@ -7,8 +7,6 @@ In progress:
 
 Single Number
 
-Single Number III
-
 Perfect Squares
 
 Two Sum
