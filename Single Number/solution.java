@@ -4,17 +4,15 @@ class Solution {
 
 	public static int singleNumber(int[] nums) {
 		HashMap hashMap = new HashMap();
-		int key = 0;
 		for(int i = 0; i < nums.length; i++){
 			if(hashMap.containsValue(nums[i]))
 				hashMap.remove(nums[i]);
 			else{
 				hashMap.put(i, nums[i]);
-				key = i;
 			}
 		}
 
-        return hashMap.get(key).hashCode();
+        return hashMap.get(0).hashCode();
     }
 
 	public static void main(String[] args) {
