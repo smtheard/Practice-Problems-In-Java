@@ -2,27 +2,27 @@ import java.util.*;
 
 class Solution {
 	public static void mergeSort(int array[], int start, int end) {
-        int middle, left, right, temp;
-        if (start < end) {
-            middle = (start + end) / 2;
-            mergeSort(array, start, middle);
-            mergeSort(array, middle + 1, end);
-            left = start;
-            right = middle + 1;
-            while (left <= middle && right <= end) {
-                if (array[left] > array[right]) {
-                    temp = array[right];
-                    for (int i = right - 1; i >= left; i--) {
-                        array[i + 1] = array[i];
-                    }
-                    array[left] = temp;
-                    right++;
-                    middle++;
-                }
-                left++;
-            }
+    int middle, left, right, temp;
+    if (start < end) {
+      middle = (start + end) / 2;
+      mergeSort(array, start, middle);
+      mergeSort(array, middle + 1, end);
+      left = start;
+      right = middle + 1;
+      while (left <= middle && right <= end) {
+        if (array[left] > array[right]) {
+          temp = array[right];
+          for (int i = right - 1; i >= left; i--) {
+            array[i + 1] = array[i];
+          }
+          array[left] = temp;
+          right++;
+          middle++;
         }
+        left++;
+      }
     }
+  }
 
     public static int[] convertToIntArray(ArrayList<Integer> list){
     	int[] intArray = new int[list.size()];
