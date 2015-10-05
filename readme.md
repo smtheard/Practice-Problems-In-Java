@@ -5,8 +5,6 @@ I am using ST2 and Java8.
 
 In progress:
 
-Single Number
-
 Perfect Squares
 
 Two Sum
