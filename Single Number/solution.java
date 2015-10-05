@@ -3,16 +3,13 @@ import java.util.*;
 class Solution {
 
 	public static int singleNumber(int[] nums) {
-		HashMap hashMap = new HashMap();
-		for(int i = 0; i < nums.length; i++){
-			if(hashMap.containsValue(nums[i]))
-				hashMap.remove(nums[i]);
-			else{
-				hashMap.put(i, nums[i]);
-			}
-		}
-
-        return hashMap.get(0).hashCode();
+		ArrayList<Integer> single = new ArrayList<Integer>();
+		for(int i = 0; i < nums.length; i++)
+			if(single.contains(nums[i]))
+				single.remove(single.indexOf(nums[i]));
+			else
+				single.add(nums[i]);
+        return single.get(0);
     }
 
 	public static void main(String[] args) {
