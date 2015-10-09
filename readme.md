@@ -7,7 +7,7 @@ In progress:
 
 Perfect Squares
 
-Two Sum
+Two Sum - need to improve solution
 
 Reverse words in a string
 
